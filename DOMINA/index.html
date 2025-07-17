@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOMINA</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+  background: url('bg-index.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+
+    /* Logo + Nav Container */
+    .top-left {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .logo-text {
+      font-size: 1rem;
+      color: #D9B991;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .nav-icon {
+      width: 30px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .nav-icon span {
+      display: block;
+      height: 3px;
+      background-color: #D9B991;
+      border-radius: 2px;
+    }
+
+    /* Floating Menu */
+    .menu {
+      position: fixed;
+      top: 55px;
+      left: 20px;
+      background-color: rgba(64, 1, 6, 0.95);
+      border-radius: 10px;
+      padding: 1rem;
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      box-shadow: 0 0 15px #260101aa;
+      z-index: 998;
+    }
+
+    .menu a {
+      color: #D9B991;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .menu a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 5px #D9B991;
+    }
+
+    /* Center Button */
+    .cta-button {
+      background: #D9B991;
+      color: #400106;
+      font-weight: bold;
+      font-size: 1.6rem;
+      padding: 1rem 3rem;
+      border: none;
+      border-radius: 40px;
+      box-shadow: 0 0 20px #40281455;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+
+    .cta-button:hover {
+      background: #402814;
+      color: #D9B991;
+      box-shadow: 0 0 40px #260101aa;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Logo + Hamburger -->
+  <div class="top-left">
+    <div class="logo-text" onclick="location.href='index.html'">DOMINA</div>
+    <div class="nav-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Hidden Menu -->
+  <div id="menu" class="menu">
+  <a href="index.html">Main</a>
+  <a href="join.html">Sell Yourself</a>
+  <a href="about.html">About</a>
+</div>
+
+  <!-- Main CTA -->
+ <!-- Call to Action with Subtitle -->
+<div style="text-align: center;">
+  <p style="color: #D9B991; font-size: 1rem; margin-bottom: 1rem;">
+    Wanna find a dominant Mistress?
+  </p>
+  <button class="cta-button" onclick="location.href='join.html'">
+    Sell Yourself
+  </button>
+</div>
+
+</body>
+</html>

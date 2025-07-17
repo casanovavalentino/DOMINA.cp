@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | DOMINA</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url('bg-about.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #D9B991;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .top-left {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .logo-text {
+      font-size: 1rem;
+      color: #D9B991;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .nav-icon {
+      width: 30px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .nav-icon span {
+      display: block;
+      height: 3px;
+      background-color: #D9B991;
+      border-radius: 2px;
+    }
+
+    .menu {
+      position: fixed;
+      top: 55px;
+      left: 20px;
+      background-color: rgba(64, 1, 6, 0.95);
+      border-radius: 10px;
+      padding: 1rem;
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      box-shadow: 0 0 15px #260101aa;
+      z-index: 998;
+    }
+
+    .menu a {
+      color: #D9B991;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .menu a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 5px #D9B991;
+    }
+
+    .about-box {
+      max-width: 600px;
+      background: rgba(38, 1, 1, 0.85);
+      padding: 2rem 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #260101;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #D9B991;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Nav and Logo -->
+  <div class="top-left">
+    <div class="logo-text" onclick="location.href='index.html'">DOMINA</div>
+    <div class="nav-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="menu" class="menu">
+    <a href="index.html">Main</a>
+    <a href="join.html">Sell Yourself</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- About Text -->
+  <div class="about-box">
+    <h1>Welcome to DOMINA</h1>
+    <p>
+      DOMINA is a sexual entertainment agency unlike any other.  
+      We provide top-tier dominant Mistresses trained to fulfill your deepest submissive cravings.  
+      <br><br>
+      By joining us, you become a customer — and a subject of obedience.  
+      Our long-term service is built on psychological seduction, irresistible power, and absolute control.  
+      <br><br>
+      Submission is a privilege. Disobedience is exile.  
+      Any refusal to comply with your assigned Mistress will result in permanent blacklisting from our services.  
+      <br><br>
+      Serve wisely. Desire deeply. Submit fully.
+    </p>
+  </div>
+</body>
+</html>

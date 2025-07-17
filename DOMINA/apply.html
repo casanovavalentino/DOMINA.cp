@@ -1,0 +1,30 @@
+<script>
+document.getElementById("joinForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = {
+    name: document.getElementById("name").value,
+    age: document.getElementById("age").value,
+    kink: document.getElementById("kink").value,
+    description: document.getElementById("description").value,
+    whatsapp: document.getElementById("whatsapp").value,
+  };
+
+  fetch("PASTE_YOUR_SCRIPT_URL_HERE", {
+    method: "POST",
+    body: JSON.stringify(formData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.result === "success") {
+        window.location.href = "thankyou.html";
+      } else {
+        alert("Something went wrong.");
+      }
+    });
+});
+</script>
+
